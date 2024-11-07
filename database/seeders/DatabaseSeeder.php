@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
        $this->call(LanguagesSeeder::class);
        $this->call(LocationSeeder::class);
        $this->call(IatiPublishersSeeder::class);
+       $this->call(IatiProjectsSeeder::class);
     }
 }

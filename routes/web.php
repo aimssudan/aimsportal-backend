@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CsvProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/upload-projects', [CsvProjectController::class, 'create']);
+
+Route::post('/upload-projects', [CsvProjectController::class, 'store'])->name('upload.projects');
